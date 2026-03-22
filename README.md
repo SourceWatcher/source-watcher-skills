@@ -7,7 +7,7 @@ Claude Code skills for [Source Watcher](https://github.com/TheCocoTeam/source-wa
 | Skill | Description |
 |---|---|
 | `list-steps` | List all available pipeline steps (extractors, transformers, loaders) from the running API |
-| `author-pipeline` | Author a `.swt` pipeline file from a natural language description |
+| `author-pipeline` | Author a `.json` pipeline file from a natural language description |
 | `run-pipeline` | Run a saved pipeline by name via the API, with timing and error reporting |
 | `query-output` | Inspect and query SQLite output files produced by pipeline runs |
 
@@ -30,7 +30,7 @@ After installing these skills in Claude Code, invoke them with the `/source-watc
 
 ## Example pipelines
 
-Ready-to-run example `.swt` pipeline files are available at [source-watcher-examples](https://github.com/TheCocoTeam/source-watcher-examples).
+Ready-to-run example pipeline files are available at [source-watcher-examples](https://github.com/TheCocoTeam/source-watcher-examples).
 
 ## License
 

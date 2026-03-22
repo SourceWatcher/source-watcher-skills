@@ -14,20 +14,20 @@ Input: `$@`
 ## Step 1 - Resolve arguments
 
 Parse the input:
-- `<pipeline-name>` (required) - the name of the `.swt` file without extension
+- `<pipeline-name>` (required) - the name of the `.json` pipeline file without extension
 - `--api-url` (optional, default: `http://localhost:8181`)
 - `--username` / `--password` (optional, will prompt if not provided)
 
 ## Step 2 - Verify the pipeline file exists
 
 ```bash
-ls source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/<pipeline-name>.swt
+ls source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/<pipeline-name>.json
 ```
 
 If not found, list available pipelines:
 
 ```bash
-ls source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/*.swt
+ls source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/*.json
 ```
 
 And tell the user which names are available.

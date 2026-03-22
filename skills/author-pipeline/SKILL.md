@@ -1,7 +1,7 @@
 ---
 name: author-pipeline
 description: >
-  Author a Source Watcher pipeline file (.swt) from a natural language description.
+  Author a Source Watcher pipeline file (.json) from a natural language description.
   Writes the file to the transformations directory so it can be run immediately.
 argument-hint: <description of what the pipeline should do> [--name <pipeline-name>] [--api-url <url>]
 allowed-tools: Bash
@@ -158,13 +158,27 @@ Modes: `lower`, `upper`, `title`
 - The `x` and `y` fields are optional canvas positions for the board UI (use `80 + i*220` and `100` as defaults).
 - Output file paths inside the container use `/var/www/html/.source-watcher/` as the base.
 
+### Pipeline file format
+
+Pipeline files are JSON objects with a `$schema` reference and a `steps` array:
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/TheCocoTeam/source-watcher-api/main/pipeline.schema.json",
+  "steps": [
+    { "type": "extractor", "name": "...", "options": {} },
+    { "type": "loader",    "name": "...", "options": {} }
+  ]
+}
+```
+
 ## Step 3 - Write the pipeline file
 
 Determine the pipeline name from `--name` if provided, otherwise derive it from the description (lowercase, hyphens, no spaces).
 
 Write the file to:
 ```
-source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/<name>.swt
+source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/<name>.json
 ```
 
 Show the generated JSON to the user before writing and ask for confirmation if the pipeline has more than 3 steps or if the source is a database with credentials.
