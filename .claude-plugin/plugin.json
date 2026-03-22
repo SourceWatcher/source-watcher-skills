@@ -1,0 +1,24 @@
+{
+  "name": "source-watcher-skills",
+  "description": "Claude Code skills for Source Watcher: author ETL pipelines, run transformations, list available steps, and inspect SQLite output.",
+  "version": "0.1.0",
+  "author": {
+    "name": "TheCocoTeam",
+    "url": "https://github.com/TheCocoTeam"
+  },
+  "repository": "https://github.com/TheCocoTeam/source-watcher-skills",
+  "homepage": "https://github.com/TheCocoTeam/source-watcher",
+  "license": "MIT",
+  "keywords": [
+    "source-watcher",
+    "etl",
+    "pipeline",
+    "extractor",
+    "transformer",
+    "loader",
+    "sqlite",
+    "csv",
+    "json",
+    "swt"
+  ]
+}

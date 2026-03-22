@@ -1,0 +1,30 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "source-watcher-skills",
+  "owner": {
+    "name": "TheCocoTeam",
+    "url": "https://github.com/TheCocoTeam"
+  },
+  "metadata": {
+    "description": "Official Source Watcher skills for Claude Code: author ETL pipelines, run transformations, list available steps, and inspect output."
+  },
+  "plugins": [
+    {
+      "name": "source-watcher",
+      "source": "./",
+      "description": "Source Watcher ETL skills - author pipeline files, run transformations via the API, list available steps, and query SQLite output.",
+      "version": "0.1.0",
+      "homepage": "https://github.com/TheCocoTeam/source-watcher",
+      "repository": "https://github.com/TheCocoTeam/source-watcher-skills",
+      "license": "MIT",
+      "keywords": [
+        "source-watcher",
+        "etl",
+        "pipeline",
+        "sqlite",
+        "csv",
+        "json"
+      ]
+    }
+  ]
+}
