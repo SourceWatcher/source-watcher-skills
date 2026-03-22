@@ -164,7 +164,7 @@ Pipeline files are JSON objects with a `$schema` reference and a `steps` array:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/TheCocoTeam/source-watcher-api/main/pipeline.schema.json",
+  "$schema": "https://raw.githubusercontent.com/TheCocoTeam/source-watcher-api/master/pipeline.schema.json",
   "steps": [
     { "type": "extractor", "name": "...", "options": {} },
     { "type": "loader",    "name": "...", "options": {} }
@@ -178,7 +178,7 @@ Determine the pipeline name from `--name` if provided, otherwise derive it from 
 
 Write the file to:
 ```
-source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/<name>.json
+source-watcher-quickstart/source-watcher-api/.source-watcher/transformations/<name>.json
 ```
 
 Show the generated JSON to the user before writing and ask for confirmation if the pipeline has more than 3 steps or if the source is a database with credentials.

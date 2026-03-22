@@ -21,13 +21,13 @@ Parse the input:
 ## Step 2 - Verify the pipeline file exists
 
 ```bash
-ls source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/<pipeline-name>.json
+ls source-watcher-quickstart/source-watcher-api/.source-watcher/transformations/<pipeline-name>.json
 ```
 
 If not found, list available pipelines:
 
 ```bash
-ls source-watcher-dev-env/source-watcher-api/.source-watcher/transformations/*.json
+ls source-watcher-quickstart/source-watcher-api/.source-watcher/transformations/*.json
 ```
 
 And tell the user which names are available.
@@ -70,7 +70,7 @@ Execution took: <elapsed>s
 
 Then check if the pipeline produced a SQLite output and offer to query it:
 ```bash
-ls source-watcher-dev-env/source-watcher-api/.source-watcher/*.db 2>/dev/null
+ls source-watcher-quickstart/source-watcher-api/.source-watcher/*.db 2>/dev/null
 ```
 
 If `.db` files are found, ask the user if they want to inspect the output. If yes, delegate to `/source-watcher:query-output`.
@@ -83,4 +83,4 @@ If `.db` files are found, ask the user if they want to inspect the output. If ye
 Suggest checking:
 1. The pipeline file for typos in step names or options
 2. That the source data URL or file path is accessible from inside the container
-3. Container logs: `docker compose -f source-watcher-dev-env/source-watcher-api/docker-compose.yml logs api`
+3. Container logs: `docker compose -f source-watcher-quickstart/source-watcher-api/docker-compose.yml logs api`

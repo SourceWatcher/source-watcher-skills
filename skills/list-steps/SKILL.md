@@ -52,5 +52,5 @@ For each step show: `name`, `object` (class name), and `description`.
 If the API is unreachable, tell the user to ensure the Source Watcher API container is running:
 
 ```bash
-cd source-watcher-dev-env/source-watcher-api && docker compose up -d api
+cd source-watcher-quickstart/source-watcher-api && docker compose up -d api
 ```

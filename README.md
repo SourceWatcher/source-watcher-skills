@@ -13,7 +13,7 @@ Claude Code skills for [Source Watcher](https://github.com/TheCocoTeam/source-wa
 
 ## Prerequisites
 
-- [Source Watcher dev environment](https://github.com/TheCocoTeam/source-watcher-dev-env) running locally
+- [Source Watcher dev environment](https://github.com/TheCocoTeam/source-watcher-quickstart) running locally
 - API available at `http://localhost:8181` (default)
 - `sqlite3` CLI available on your host for `query-output`
 

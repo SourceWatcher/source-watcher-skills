@@ -14,7 +14,7 @@ Input: `$@`
 ## Step 1 - Find available output databases
 
 ```bash
-ls source-watcher-dev-env/source-watcher-api/.source-watcher/*.db 2>/dev/null
+ls source-watcher-quickstart/source-watcher-api/.source-watcher/*.db 2>/dev/null
 ```
 
 If a specific `<pipeline-name>` or `<db-path>` was provided, resolve it:
