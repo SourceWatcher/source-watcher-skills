@@ -81,6 +81,35 @@ Use the step reference below to choose the right step types and option shapes.
 ```
 For MySQL/PostgreSQL use `driver: pdo_mysql` or `driver: pdo_pgsql` with `host`, `port`, `database`, `user`, `password` options instead of `path`.
 
+**TesseractOcr** - Extract text from an image file using Tesseract OCR (each text line = one row)
+```json
+{
+  "type": "extractor",
+  "name": "TesseractOcr",
+  "options": {
+    "filePath": "/var/www/html/.source-watcher/data/image-with-text.jpg",
+    "column": "text",
+    "language": "eng"
+  }
+}
+```
+`column` defaults to `text`. `language` defaults to `eng` (Tesseract language code). Requires `tesseract` installed in the container.
+
+**Pdf** - Extract text from any PDF (digital text-layer, scanned image-only, or mixed). Automatically uses `pdftotext` for text-layer pages and Tesseract OCR for image-only pages.
+```json
+{
+  "type": "extractor",
+  "name": "Pdf",
+  "options": {
+    "filePath": "/var/www/html/.source-watcher/data/document.pdf",
+    "column": "text",
+    "pageColumn": "page",
+    "language": "eng"
+  }
+}
+```
+`column` defaults to `text`. `pageColumn` defaults to `page` (set to `""` to omit the page number column). `language` defaults to `eng` (used only for OCR fallback pages). Requires `poppler-utils` and `tesseract` installed in the container.
+
 **Find Missing** (execution-extractor) - Find gaps in a numeric sequence from the previous extractor
 ```json
 {
